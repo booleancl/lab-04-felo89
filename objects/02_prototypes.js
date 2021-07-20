@@ -1,7 +1,7 @@
 function prototypes(){
   function Foo(){}
 
-  return Foo.constructor
+  return new Foo
 }
 
 function Gadget(name, color) {
@@ -18,16 +18,16 @@ function Gadget(name, color) {
 //   return 'Rating: ' + this.rating + ', price: ' + this.price;
 // };
 
-// Gadget.prototype = {
-//   price: 100,
-//   rating: 3,
-//   getInfo: function () {
-//     return 'Rating: ' + this.rating + ', price: ' + this.price;
-//   },
-//   get: function(property){
-//     return this[property]
-//   } 
-// };
+Gadget.prototype = {
+  price: 100,
+  rating: 3,
+  getInfo: function () {
+    return 'Rating: ' + this.rating + ', price: ' + this.price;
+  },
+  get: function(property){
+    return this[property]
+  } 
+};
 
 module.exports = {
   prototypes: prototypes,

@@ -18,8 +18,8 @@ function Triangle(side, height){
   };
 }
 
-TwoDShape.prototype = new Object()
-Triangle.prototype = new Object()
+TwoDShape.prototype = new Shape()
+Triangle.prototype = new TwoDShape()
 
 module.exports = {
   Triangle: Triangle,

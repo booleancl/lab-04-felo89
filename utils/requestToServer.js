@@ -6,10 +6,10 @@ module.exports = {
         grades: [ 10, 10, 6, 4 ]
       },
     })
- 
-    return promise.then(function(response){
-      return response.data.grades
-    })
+    return promise
+      .then(function(response){
+        return response.data.grades
+      })
   },
   post: function() {
     const promise = Promise.reject(
